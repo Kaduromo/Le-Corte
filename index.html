@@ -15,9 +15,10 @@
                     <div class="header__list">
                         <p>Новокузнечный переулок 4/1</p>
                         <p><a href="tel:88121234567" class="header__list_tel">8 (812) 123-45-67</a></p>
+                        <button class="header-hamburger" onclick="openModal()"><span></span></button>
                     </div>
-                    <nav>
-                        <ul class="header__nav">
+                    <nav class="nav">
+                        <ul data-da=".hamburger_mobile, 860, 2" class="header__nav">
                             <li class="header__nav_item"><a href="#" class="header__nav_link">Доставка</a></li>
                             <li class="header__nav_item"><a href="#" class="header__nav_link">Каталог</a></li>
                             <li class="header__nav_item"><a href="#" class="header__nav_link">Коллекции</a></li>
@@ -83,13 +84,13 @@
                         </div>
                         <div class="product_image">
                             <div class="product_img product_img__one">
-                                <img src="img/Rectangle 11.png" alt="Rectangle">
+                                <img src="img/product1.png" alt="Rectangle">
                             </div>
                             <div class="product_img product_img__two">
-                                <img src="img/Rectangle 12.png" alt="Rectangle">
+                                <img src="img/product2.png" alt="Rectangle">
                             </div>
                             <div class="product_img product_img__three">
-                                <img src="img/Rectangle 13.png" alt="Rectangle">
+                                <img src="img/product3.png" alt="Rectangle">
                             </div>
                         </div>
                     </div>
@@ -105,7 +106,7 @@
                             <p class="tasting_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat enim tortor in hac id imperdiet adipiscing. Pellentesque nisi, mi&nbsp;sit non sit sed fermentum.</p>    
                         </div>
                         <form class="tasting__form">
-                            <input class="tasting__form_name" type="text" name="name" id="" placeholder="Имя" required>
+                            <input class="tasting__form_name" type="text" name="name" placeholder="Имя" required>
                             <input class="tasting__form_tel" type="tel" name="tel" placeholder="Телефон" required>
                             <input class="tasting__form_adress" type="text" name="address" placeholder="Бутик на Невском 103" required>
                             <button class="tasting__form_btn">записаться</button>
@@ -140,5 +141,12 @@
             </footer>
         </main>
     </div>
+
+    <div id="modal" class="hamburger_mobile">
+        <button class="burger_close" onclick="closeModalMenu()"></button>
+    </div>
+    
+    <script src="script/dynamicAdapt.js"></script>
+    <script src="script/main.js"></script>
 </body>
 </html>
