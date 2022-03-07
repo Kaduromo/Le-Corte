@@ -1,6 +1,6 @@
-# Le Corte ![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=#FF7139)
+![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=#FF7139) # Le Corte 
 
-* [Макет сайта Figma](https://www.figma.com/file/cMWY78AaBEhXRzfG0ajIPf/Le-corte?node-id=0%3A1) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) * [Макет сайта Figma](https://www.figma.com/file/cMWY78AaBEhXRzfG0ajIPf/Le-corte?node-id=0%3A1) 
 * [Демо сайта](https://kaduromo.github.io/Le-Corte/) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 
