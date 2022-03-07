@@ -16,12 +16,14 @@
                         <p>Новокузнечный переулок 4/1</p>
                         <p><a href="tel:88121234567" class="header__list_tel">8 (812) 123-45-67</a></p>
                     </div>
-                    <ul class="header__nav">
-                        <li class="header__nav_item"><a href="#" class="header__nav_link">Доставка</a></li>
-                        <li class="header__nav_item"><a href="#" class="header__nav_link">Каталог</a></li>
-                        <li class="header__nav_item"><a href="#" class="header__nav_link">Коллекции</a></li>
-                        <li class="header__nav_item"><a href="#" class="header__nav_link">Контакты</a></li>
-                    </ul>
+                    <nav>
+                        <ul class="header__nav">
+                            <li class="header__nav_item"><a href="#" class="header__nav_link">Доставка</a></li>
+                            <li class="header__nav_item"><a href="#" class="header__nav_link">Каталог</a></li>
+                            <li class="header__nav_item"><a href="#" class="header__nav_link">Коллекции</a></li>
+                            <li class="header__nav_item"><a href="#" class="header__nav_link">Контакты</a></li>
+                        </ul>
+                    </nav>
                     <div class="header__row">
                         <div class="header__row_absolute">
                             <div class="header__row_btn">
@@ -81,13 +83,13 @@
                         </div>
                         <div class="product_image">
                             <div class="product_img product_img__one">
-                                <img src="/img/Rectangle 11.png" alt="Rectangle">
+                                <img src="img/Rectangle 11.png" alt="Rectangle">
                             </div>
                             <div class="product_img product_img__two">
-                                <img src="/img/Rectangle 12.png" alt="Rectangle">
+                                <img src="img/Rectangle 12.png" alt="Rectangle">
                             </div>
                             <div class="product_img product_img__three">
-                                <img src="/img/Rectangle 13.png" alt="Rectangle">
+                                <img src="img/Rectangle 13.png" alt="Rectangle">
                             </div>
                         </div>
                     </div>
@@ -95,9 +97,20 @@
             </div>
             <div class="tasting">
                 <div class="container">
-                    <h2 class="tasting_title title_block">Запись на дегустацию</h2>
-                    <p class="tasting_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat enim tortor in hac id imperdiet adipiscing. Pellentesque nisi, mi sit non sit sed fermentum.</p>
-                    <form></form>
+                    <div class="tasting__box">
+                        <img src="img/grape.png" alt="" class="tasting__box_left">
+                        <img src="img/barrel.png" alt="" class="tasting__box_right">
+                        <div class="tasting__block">
+                            <h2 class="tasting_title title_block">Запись на дегустацию</h2>
+                            <p class="tasting_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat enim tortor in hac id imperdiet adipiscing. Pellentesque nisi, mi&nbsp;sit non sit sed fermentum.</p>    
+                        </div>
+                        <form class="tasting__form">
+                            <input class="tasting__form_name" type="text" name="name" id="" placeholder="Имя" required>
+                            <input class="tasting__form_tel" type="tel" name="tel" placeholder="Телефон" required>
+                            <input class="tasting__form_adress" type="text" name="address" placeholder="Бутик на Невском 103" required>
+                            <button class="tasting__form_btn">записаться</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <footer class="footer">
