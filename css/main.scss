@@ -273,18 +273,31 @@ body {
     cursor: pointer;
     padding: 15px 30px;
     border: 1px solid #99862A;
+    border-radius: 10px;
+    animation: shadow 3.7s linear infinite;
     transition: .2s;
     &:hover {
         color: #99862A;
         background: #fff;
     }
-		// .btn_product
-		&_product {
-            &:hover {
-                color: #99862A;
-                background: transparent;
-            }
-		}
+    // .btn_product
+	&_product {
+        &:hover {
+            color: #99862A;
+            background: transparent;
+        }
+    }
+}
+@keyframes shadow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, .6);
+    }
+    50% {
+        box-shadow: -15px 10px 7px 4px rgba(0, 0, 0, .65);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, .6);
+    }
 }
 .banner {
     padding-bottom: 100px;
@@ -295,6 +308,12 @@ body {
             padding: 5.7% 15.8%;
             border: 1px solid #fff;
             text-align: center;
+            @include breakpoint(768) {
+                padding: calc(35px + 20*(100vw - 440px)/768);
+            }
+            @include breakpoint(440) {
+                padding: calc(15px + 20*(100vw - 320px)/440);
+            }
 		}
 		// .banner_title
 		&_title {
@@ -302,6 +321,9 @@ body {
             font-weight: 700;
             font-size: 36px;
             line-height: 150%;
+            @include breakpoint(768) {
+                font-size: calc(21.9px + 20*(100vw - 320px)/768);
+            }
 		}
 		// .banner_text
 		&_text {
@@ -309,12 +331,20 @@ body {
             font-size: 16px;
             line-height: 150%;
             margin: 80px 0 50px;
+            @include breakpoint(768) {
+                margin-top: calc(40px + 30*(100vw - 320px)/768);
+                margin-bottom: calc(30px + 30*(100vw - 320px)/768);
+                font-size: calc(13px + 5*(100vw - 320px)/768);
+            }
 		}
 		// .banner_img
 		&_img {
             width: 160px;
-            height: 160px;
+            height: 100%;
             object-fit: cover;
+            @include breakpoint(768) {
+                width: calc(100px + 105*(100vw - 320px)/768);
+            }
 		}
 }
 .title_block {
@@ -327,6 +357,11 @@ body {
         width: 160px;
         height: 1px;
         background:#fff;
+        @include breakpoint(768) {
+            width: 30%;
+            left: 35%;
+            bottom: -35%;
+        }
     }
 }
 .product {
@@ -350,6 +385,7 @@ body {
         }
         @include breakpoint(1060) {
             flex-direction: column;
+            gap: 30px;
         }
         &::before {
             top: 0;
@@ -394,39 +430,36 @@ body {
         max-width: 445px;
         margin: 27px 0;
     }
-    // .product_image
-    &_image {
+    // .product__image
+    &__image {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
+        margin: 0 auto;
     }
-    &_img {
+    &__img {
         object-fit: cover;
-        &__one {
+        &:nth-child(1) {
             grid-area: 1 / 1 / 2 / 3;
-            & img {
-                width: 540px;
-                height: 500px;
-                @include breakpoint(1060) {
-                    width: 91%;
-                    height: 100%;
-                }
-            }
         }
-        // .product_img__two
-        &__two {
+        &:nth-child(2) {
             grid-area: 2 / 1 / 3 / 2;
         }
-        // .product_img__three
-        &__three {
+        &:nth-child(3) {
             grid-area: 2 / 2 / 3 / 3;
         }
-        &__two img, &__three img {
-            width: 255px;
-            height: 228px;
+        &_b {
+            width: 540px;
+            height: 100%;
             @include breakpoint(1060) {
-                width: 83%;
-                height: 100%;
+                width: 63.5vw;
+            }
+        }
+        &_m {
+            width: 255px;
+            height: 100%;
+            @include breakpoint(1060) {
+                width: 30vw;
             }
         }
     }
