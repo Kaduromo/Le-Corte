@@ -3,5 +3,5 @@ function openModal() {
 }
 
 function closeModalMenu() {
-    document.getElementById("modal").style.top = "-100%";
+    document.getElementById("modal").style.top = "-120%";
 }
